@@ -1,0 +1,4 @@
+deny from all
+<Files ~ "^($|index\.html$|api-v1\.php$|bbs-entry\.php$)">
+allow from all
+</Files>

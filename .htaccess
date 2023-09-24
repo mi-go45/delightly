@@ -1,0 +1,7 @@
+Options +Indexes
+Header set Accept-CH "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"
+
+RewriteEngine on
+RewriteRule ^test/read\.cgi/(.*?)/(.*?)/(.*)$ /$1/#$2/$3 [L,R=301,NE]
+RewriteRule ^test/bbs\.cgi(.*) _bg/bbs-entry.php
+RewriteRule ^v1/(.*)$ _bg/api-v1.php
